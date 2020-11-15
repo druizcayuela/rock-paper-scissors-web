@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Presentation() {
+export default function Presentation(props) {
   const classes = useStyles();
 
 	return (
@@ -31,9 +31,7 @@ export default function Presentation() {
 				<Grid container spacing={3}>
 					<Grid item xs={8}>
 						<Header />
-						<Counter />
-						<Round />
-						<RoundFooter />
+						{props.children}
 					</Grid>
 					<Grid item xs={4}>
 						<img src={logo} alt="Logo" />

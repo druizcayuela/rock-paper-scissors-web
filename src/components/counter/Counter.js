@@ -24,7 +24,7 @@ const Counter = () => {
 
   return (
     <div className={classes.root}>
-      <Button className={classes.tag}>Total rounds played {counter}</Button>
+      <Button className={classes.tag}>{counter} Total rounds played</Button>
     </div>
   );
 };
