@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core';
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles(({ spacing, palette }) => ({
   root: {
@@ -19,10 +20,11 @@ const useStyles = makeStyles(({ spacing, palette }) => ({
 
 const Counter = () => {
   const classes = useStyles();
+  const counter = useSelector(state => state.roundResult.counter);
 
   return (
     <div className={classes.root}>
-      <Button className={classes.tag}>Total rounds played </Button>
+      <Button className={classes.tag}>Total rounds played {counter}</Button>
     </div>
   );
 };

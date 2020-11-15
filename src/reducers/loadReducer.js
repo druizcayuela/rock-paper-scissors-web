@@ -1,16 +1,14 @@
 import { LOADING, NO_LOADING } from '../actions/types';
 
-const INITIAL_STATE = {
-    loading: false
-};
+const INITIAL_STATE = false;
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case LOADING:
-            return { ...state, loading: true };
+            return true;
         case NO_LOADING:
-            return { ...state, loading: false };
+            return false;
         default:
-            return state;
+            return false;
     }
 }
