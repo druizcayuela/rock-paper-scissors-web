@@ -4,7 +4,7 @@ const INITIAL_STATE = {
     loading: false
 };
 
-export const loadReducer = (state = INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case LOADING:
             return { ...state, loading: true };

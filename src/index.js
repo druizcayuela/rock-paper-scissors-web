@@ -1,12 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import reduxThunk from 'redux-thunk';
+import { createMuiTheme, MuiThemeProvider  } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import reducers from './reducers';
+
+const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
+  palette: {
+    primary: blue,
+    secondary: {
+      main: '#fafafa',
+    },
+  },
+});
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(reducers, {}, composeEnhancers(applyMiddleware(reduxThunk)));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MuiThemeProvider theme={theme}>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,9 +1,12 @@
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      Rock · Papper · Scissors
-    </div>
+	<BrowserRouter>
+		<div>
+			Rock · Papper · Scissors
+		</div>
+	</BrowserRouter>
   );
 }
 
