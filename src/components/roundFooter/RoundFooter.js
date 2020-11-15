@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import { playGame } from "../../actions";
+import { playGame, reset } from "../../actions";
 import SweetAlert  from 'react-bootstrap-sweetalert';
 
 export default function RoundFooter() {
@@ -52,7 +52,10 @@ export default function RoundFooter() {
 				success 
 				title="Reseted!" 
 				show={showConfirm}
-				onConfirm={() => setShowConfirm(false)}>
+				onConfirm={() => {
+					dispatch(reset());
+					setShowConfirm(false);
+				}}>
 				You have successfully reseted!
 			</SweetAlert>
 		</div> 
