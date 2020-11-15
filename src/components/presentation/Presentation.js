@@ -4,9 +4,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import logo from '../../assets/logo.png'
 import Header from '../header/Header';
-import Counter from '../counter/Counter';
-import Round from '../round/Round';
-import RoundFooter from '../roundFooter/RoundFooter';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,8 +11,7 @@ const useStyles = makeStyles((theme) => ({
     width: '50%',
 	padding: '48px 40px 36px',
 	margin: '5% auto',
-	height: 'auto',
-	minHeight: '500px',
+	height: '611px',
   },
   grid: {
 	  flexGrow: 1,

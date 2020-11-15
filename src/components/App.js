@@ -3,6 +3,7 @@ import Counter from './counter/Counter';
 import Presentation from './presentation/Presentation';
 import Round from './round/Round';
 import RoundFooter from './roundFooter/RoundFooter';
+import Total from './total/Total';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 			/>
 			<Route exact path='/total' render={props =>
 				<div>
-					Nuflo
+					<Total />
 				</div>}
 			/>
 			</Presentation>

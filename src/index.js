@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 import { createMuiTheme, MuiThemeProvider  } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
