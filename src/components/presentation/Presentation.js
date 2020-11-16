@@ -4,6 +4,9 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import logo from '../../assets/logo.png'
 import Header from '../header/Header';
+import SweetAlert  from 'react-bootstrap-sweetalert';
+import { resetError } from "../../actions";
+import { useSelector, useDispatch } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Presentation(props) {
   const classes = useStyles();
+  const error = useSelector(state => state.error);
+  const dispatch = useDispatch();
 
 	return (
 		<div>
@@ -34,6 +39,16 @@ export default function Presentation(props) {
 					</Grid>
 				</Grid>
 			</Paper>
+
+			<SweetAlert 
+				error 
+				title="D'oh!" 
+				show={error}
+				onConfirm={() => {
+					dispatch(resetError());
+				}}>
+				Something was wrong :(
+			</SweetAlert>
 		</div>
 	);
 }

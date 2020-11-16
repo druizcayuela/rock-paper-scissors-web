@@ -1,13 +1,11 @@
-import { LOADING, NO_LOADING } from '../actions/types';
+import { ERROR } from '../actions/types';
 
 const INITIAL_STATE = false;
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case LOADING:
-            return true;
-        case NO_LOADING:
-            return false;
+        case ERROR:
+            return action.payload;
         default:
             return false;
     }

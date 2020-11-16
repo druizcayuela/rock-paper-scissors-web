@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import loadReducer from './loadReducer';
 import playGameReducer from './playGameReducer';
 import totalReducer from './totalReducer';
+import errorReducer from './errorReducer';
 
 export default combineReducers({
-    load: loadReducer,
     roundResult: playGameReducer,
     totalResult: totalReducer,
+    error: errorReducer,
 });
