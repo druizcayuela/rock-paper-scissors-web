@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { playGame, reset } from "../../actions";
 import SweetAlert  from 'react-bootstrap-sweetalert';
+import './RoundFooter.css';
 
 export default function RoundFooter() {
 
@@ -12,23 +13,15 @@ export default function RoundFooter() {
 	const [showConfirm, setShowConfirm] = useState(false);
 
 	return (
-		<div style={{marginTop: 40}}>
-			<div style={{float: 'left', marginTop: 10}}>
-				<Link 
-					to="/total"  
-					style={{
-						marginTop: '10px',
-						color: '#3FCBE5',
-						fontWeight: 'bold'
-						}}>
-					View Total
-				</Link>
+		<div className="margin-top-40">
+			<div className="div-link">
+				<Link to="/total" className="total-link">View Total</Link>
 			</div>
-			<div style={{float: 'right'}}>
-				<Button onClick={() => dispatch(playGame())} variant="contained" size="large" color="primary" style={{fontWeight: 'bold', marginRight: 20}} >
+			<div className="float-right">
+				<Button onClick={() => dispatch(playGame())} variant="contained" size="large" color="primary" className="play-button" >
 					Play
 				</Button>
-				<Button onClick={() => setShow(true)} variant="contained" size="large" color="secondary" style={{fontWeight: 'bold'}} >
+				<Button onClick={() => setShow(true)} variant="contained" size="large" color="secondary" className="font-weight-bold">
 					Reset
 				</Button>
 			</div>

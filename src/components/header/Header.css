@@ -1,0 +1,14 @@
+.header-title {
+    width: 200px;
+    margin-left: -4px;
+}
+
+.heart {
+    width: 60px;
+    position: absolute;
+    margin-top: -15px;
+}
+
+.display-content {
+	display: contents;
+}
