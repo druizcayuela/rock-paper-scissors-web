@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 export default function Round() {
   const classes = useStyles();
   const rows = useSelector(state => state.roundResult.roundsPlayed);
-
+  let id=0; // Definetly, it's  not the best way to work with React's Reconciliation Algorithm...
 
   return (
     <div className={classes.root}>
@@ -48,12 +48,14 @@ export default function Round() {
           </TableHead>
           <TableBody>
             {rows.map((row) => {
+			  id++;
               return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                <TableRow hover role="checkbox" tabIndex={-1} key={id}>
                   {columns.map((column) => {
+					id++;
                     const value = row[column.id];
                     return (
-                      <TableCell key={column.id} align={column.align}>
+                      <TableCell key={id} align={column.align}>
                         {value}
                       </TableCell>
                     );

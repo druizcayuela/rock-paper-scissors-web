@@ -14,7 +14,7 @@ const Total = () => {
 
   return (
     <div style={{marginTop: 40}} >
-		<div style={{height: 380}} >
+		<div style={{height: 390}} >
 			<h3>Total Rounds Played</h3><br />
 			Total rounds played:  {totalResult?.roundsPlayed}	  <br />
 			Total wins for first players:  {totalResult?.winsFirstPlayer}	  <br />
@@ -25,7 +25,6 @@ const Total = () => {
 			<Link 
 				to="/"  
 				style={{
-					marginTop: '10px',
 					color: '#3FCBE5',
 					fontWeight: 'bold'
 					}}>

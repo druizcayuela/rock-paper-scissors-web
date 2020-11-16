@@ -10,18 +10,14 @@ function App() {
 	<BrowserRouter>
 		<div>
 			<Presentation>
-			<Route exact path='/' render={props =>
-				<div>
-					<Counter />
-					<Round />
-					<RoundFooter />
-				</div>}
-			/>
-			<Route exact path='/total' render={props =>
-				<div>
-					<Total />
-				</div>}
-			/>
+				<Route exact path='/' render={props =>
+					<div>
+						<Counter />
+						<Round />
+						<RoundFooter />
+					</div>}
+				/>
+				<Route exact path='/total' component={Total} />
 			</Presentation>
 		</div>
 	</BrowserRouter>

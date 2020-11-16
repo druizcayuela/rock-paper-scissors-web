@@ -12,17 +12,17 @@ export default function RoundFooter() {
 	const [showConfirm, setShowConfirm] = useState(false);
 
 	return (
-		<div style={{marginTop: '40px'}}>
-			<div style={{float: 'left'}}>
-			<Link 
-				to="/total"  
-				style={{
-					marginTop: '10px',
-					color: '#3FCBE5',
-					fontWeight: 'bold'
-					}}>
-				View Total
-			</Link>
+		<div style={{marginTop: 40}}>
+			<div style={{float: 'left', marginTop: 10}}>
+				<Link 
+					to="/total"  
+					style={{
+						marginTop: '10px',
+						color: '#3FCBE5',
+						fontWeight: 'bold'
+						}}>
+					View Total
+				</Link>
 			</div>
 			<div style={{float: 'right'}}>
 				<Button onClick={() => dispatch(playGame())} variant="contained" size="large" color="primary" style={{fontWeight: 'bold', marginRight: 20}} >
