@@ -10,7 +10,7 @@ const Total = () => {
 
   useEffect(() => {
     dispatch(getTotal())
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="margin-top-40" >

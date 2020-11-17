@@ -47,7 +47,7 @@ export default function Round() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => {
+            {rows && rows.map((row) => {
 			  id++;
               return (
                 <TableRow hover role="checkbox" tabIndex={-1} key={id}>
