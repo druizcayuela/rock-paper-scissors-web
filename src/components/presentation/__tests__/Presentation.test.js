@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Presentation from '../Presentation';
 import Counter from '../../counter/Counter';
+import { mockState } from "react-redux";
 
 jest.doMock('../../counter/Counter', () => {
 	const Counter = () => <div />;
@@ -15,7 +16,8 @@ describe('Presentation', () => {
 		<Presentation />
 	);
     expect(wrapped.find('Header').length).toEqual(1);
-    expect(wrapped.find('Counter').length).toEqual(0);
+	expect(wrapped.find('Counter').length).toEqual(0);
+	expect(wrapped.find('SweetAlert').length).toEqual(1);
   });
 
   it('should render the header plus children components', () => {
@@ -25,6 +27,7 @@ describe('Presentation', () => {
 		</Presentation>
 	);
     expect(wrapped.find('Header').length).toEqual(1);
-    expect(wrapped.find('Counter').length).toEqual(1);
+	expect(wrapped.find('Counter').length).toEqual(1);
+	expect(wrapped.find('SweetAlert').length).toEqual(1);
   });
 });
