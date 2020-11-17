@@ -16,10 +16,10 @@ const Total = () => {
     <div className="margin-top-40" >
 		<div className="result-data" >
 			<h3>Total Rounds Played</h3><br />
-			Total rounds played:  {totalResult?.roundsPlayed}	  <br />
-			Total wins for first players:  {totalResult?.winsFirstPlayer}	  <br />
-			Total wins for second players:  {totalResult?.winsSecondPlayer}	  <br />
-			Total draws:  {totalResult?.totalDraws}	  <br />
+			Total rounds played: {totalResult?.roundsPlayed}<br />
+			Total wins for first players: {totalResult?.winsFirstPlayer}<br />
+			Total wins for second players: {totalResult?.winsSecondPlayer}<br />
+			Total draws: {totalResult?.totalDraws}<br />
 		</div>
 		<div className="float-left">
 			<Link to="/" className="go-back-link">Go Back</Link>

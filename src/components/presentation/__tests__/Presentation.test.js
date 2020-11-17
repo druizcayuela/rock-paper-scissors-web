@@ -18,6 +18,7 @@ describe('Presentation', () => {
     expect(wrapped.find('Header').length).toEqual(1);
 	expect(wrapped.find('Counter').length).toEqual(0);
 	expect(wrapped.find('SweetAlert').length).toEqual(1);
+	expect(wrapped.find('SweetAlert').prop('show')).toBeFalsy();
   });
 
   it('should render the header plus children components', () => {
@@ -28,6 +29,19 @@ describe('Presentation', () => {
 	);
     expect(wrapped.find('Header').length).toEqual(1);
 	expect(wrapped.find('Counter').length).toEqual(1);
-	expect(wrapped.find('SweetAlert').length).toEqual(1);
+  });
+
+  it('should render sweet alert when state error is true', () => {
+	mockState({
+		error: true
+	});
+
+	let wrapped = shallow(
+		<Presentation >
+			<Counter></Counter>
+		</Presentation>
+	);
+
+	expect(wrapped.find('SweetAlert').prop('show')).toEqual(true); 
   });
 });
