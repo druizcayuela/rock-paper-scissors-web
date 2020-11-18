@@ -11,11 +11,11 @@ describe('RoundFooter', () => {
 
 	beforeEach(() => {
 		mount = createMount();
-	  });
+	});
 	
-	  afterEach(() => {
+	afterEach(() => {
 		mount.cleanUp();
-	  });
+	});
 
 	it('should render two buttons and one link', () => {
 		let wrapped = mount( <App> <RoundFooter />  </App>);
