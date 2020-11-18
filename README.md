@@ -1,72 +1,66 @@
 [![CircleCI](https://circleci.com/gh/druizcayuela/rock-paper-scissors-web.svg?style=svg)](https://circleci.com/gh/druizcayuela/rock-paper-scissors-web)
 
-# Getting Started with Create React App
+# ROCK-PAPER-SCISSORS React Web Application
+
+ROCK-PAPER-SCISSORS is a React Web Application. It's going to consume the following Spring RestFul API: https://github.com/druizcayuela/rock-paper-scissors
+
+
+### Tech
+
+It uses a number of open source projects to work properly:
+
+* [ReactJS](https://reactjs.org/) - HTML enhanced for web apps!
+* [REDUX](https://es.redux.js.org/) - Redux is a predictable state container for JavaScript apps.
+* [REDUX-THUNK](https://github.com/reduxjs/redux-thunk) - Thunk middleware for Redux.
+* [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser.
+* [MaterialUI](https://material-ui.com/) - React components that implement Google's Material Design.
+* [Twitter Bootstrap](https://getbootstrap.com/) - great UI boilerplate for modern web apps.
+* [GitHub](https://github.com/) - Github as control version of the code.
+* [Heroku](https://www.heroku.com/) - Cloud system to host application.
+* [CircleCI](https://circleci.com/) - CI system for our application.
+
+
+### Testing
+
+Testing is done with:
+
+* [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+* [Enzyme](https://enzymejs.github.io/enzyme/) - Enzyme is a JavaScript Testing utility for React.
+* [Moxios](https://github.com/axios/moxios) - Tool to mock axios for testing.
+* [MaterialUI](https://material-ui.com/guides/testing/) - MaterialUI tools for testing.
+
+### Build Configuration
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+### Front-End Components
 
-### `npm start`
+The all components which are used by the Front End Architecture:
 
-Runs the app in the development mode.\
+* [SweetAlert2](https://sweetalert2.github.io/) - REPLACEMENT FOR JAVASCRIPT'S POPUP BOXES
+* [MaterialUI](https://material-ui.com/) - From Material: Button, Table, Paper, Grid ...
+
+### Installation
+
+It requires [Node.js](https://nodejs.org/) v10+ to run.
+
+Install the dependencies and devDependencies
+
+```sh
+$ npm install -d
+```
+
+### Development
+
+```sh
+$ npm run start
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Building for source
 
-### `npm test`
+This web is also released into Heroku:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://stormy-sierra-90708.herokuapp.com/
