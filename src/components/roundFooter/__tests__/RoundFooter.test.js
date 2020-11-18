@@ -3,6 +3,7 @@ import RoundFooter from '../RoundFooter';
 import { createMount } from '@material-ui/core/test-utils';
 import App from '../../App'
 import { mockDispatch } from "react-redux";
+import { updateWrapper } from '../../../tools/tools';
 
 describe('RoundFooter', () => {
 
@@ -22,9 +23,10 @@ describe('RoundFooter', () => {
 		expect(wrapped.find('Link').length).toEqual(1);
 	});
 
-	it('should dispatch when clicking in play button', () => {
+	it('should dispatch when clicking in play button', async () => {
 		let wrapped = mount( <App> <RoundFooter />  </App>);
-		expect(wrapped.find('button').at(0).simulate('click'));
+		expect(wrapped.find('button').at(0).simulate('click'));	
+		await updateWrapper(wrapped);
 		expect(mockDispatch).toHaveBeenCalledTimes(1);
 	});
 

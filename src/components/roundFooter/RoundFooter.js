@@ -11,6 +11,13 @@ export default function RoundFooter() {
 	const dispatch = useDispatch();
 	const [show, setShow] = useState(false);
 	const [showConfirm, setShowConfirm] = useState(false);
+	const [loading, setLoading] = useState(false);
+
+	const playGameClickButton = async () => {
+		setLoading(true)		
+		await dispatch(playGame());
+		setLoading(false)		
+	}
 
 	return (
 		<div className="margin-top-40">
@@ -18,7 +25,13 @@ export default function RoundFooter() {
 				<Link to="/total" className="total-link">View Total</Link>
 			</div>
 			<div className="float-right">
-				<Button onClick={() => dispatch(playGame())} variant="contained" size="large" color="primary" className="play-button" >
+				<Button 
+					disabled={loading}
+					onClick={playGameClickButton} 
+					variant="contained" 
+					size="large" 
+					color="primary" 
+					className="play-button" >
 					Play
 				</Button>
 				<Button onClick={() => setShow(true)} variant="contained" size="large" color="secondary" className="font-weight-bold">
